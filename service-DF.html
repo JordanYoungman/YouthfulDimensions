@@ -55,6 +55,8 @@
           <img class="img-fluid" src='assets/slideshow/Dermal.jpg' alt="">
 		  <br>
 		  <br>
+			<button class="collapsible">General Information:</button>
+			<div class="content">
 		  <p>Dermal Fillers are popular and versatile anti-ageing injectable treatment that plumps, volumises and lifts the skin leaving it smooth, contoured and youthful.</p>
 		  <p>With instant results and no down-time it’s easy to understand why it’s a popular anti-ageing treatment. The most popular treatment areas include:</p>
 		  <ul>
@@ -67,8 +69,11 @@
 			<li>Lip Lines - to fill lipstick lines, also known as smoker's lines</li>
 			<li>Lip Filler - to define the vermillion boarder and add volume to the body of the lips.</li>
           </ul>
-          <h3 class="my-3">Day of Treatment</h3>
-          <ul>
+			</div>
+			
+			<button class="collapsible">Day of Treatment:</button>
+			<div class="content">
+        <ul>
             <li>Arrive to the office with a "clean face" - washed and without makeup. </li>
             <li>In order to maximise your comfort during the procedure, a topical anesthetic may be applied. </li>
 		  </ul>
@@ -90,12 +95,15 @@
 		  <li>Discoloured blotches in areas not injected or blanching of injected areas</li>
 		  </ul>
 		  <p>How Long Will Dermal Fillers Last?
-The short answer is, of course, it depends - what areas were treated, and with which specific product. Cosmetic fillers are long lasting, but not permanent.
-Shorter term fillers made of hyaluronic acid, like Juvederm and Revolax, will last anywhere from 6-18 months depending on the areas treated and your bodies metabolism.</p>
+			The short answer is, of course, it depends - what areas were treated, and with which specific product. Cosmetic fillers are long lasting, but not permanent.
+			Shorter term fillers made of hyaluronic acid, like Juvederm and Revolax, will last anywhere from 6-18 months depending on the areas treated and your bodies metabolism.</p>
         </div>
 
+			</div>
+  
         <div class="col-md-4">
-          <h3 class="my-3">Dermal Filler Information</h3>
+		<button class="collapsible">Dermal Filler Information:</button>
+			<div class="content">
           <p>To reduce the amount of bruising and/or swelling from the injection sites, please follow the instructions below. </p>
           <ul>
             <li>Avoid blood thinning over-the-counter medications such as Aspirin, Wafarin and Ibuprofen for 1 week prior. Please consult your Doctor if you are taking Aspirin and Warfarin for medical reasons!  If you continue to take these medications the chances of developing an injection-related hematoma (blood clot) which can leave a dark spot if it becomes entrapped in the filler implant is higher. The dark spot may remain until the filler is naturally dissolved.</li>
@@ -107,6 +115,7 @@ Shorter term fillers made of hyaluronic acid, like Juvederm and Revolax, will la
 			<li>Do not use dermal fillers if you are pregnant or breastfeeding, are allergic to any ingredients, or suffer from neurological disorders. Please inform us if you have any questions about this prior to your treatment.</li>
 			<li>Do not plan any social events for the next 3-7 days as you may have bruising and/or swelling lasting this long or longer. You can cover up bruising with makeup.</li>
           </ul>
+			</div>
         </div>
 
       </div>
@@ -128,5 +137,20 @@ Shorter term fillers made of hyaluronic acid, like Juvederm and Revolax, will la
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+  <script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
 
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+</script>
 </html>

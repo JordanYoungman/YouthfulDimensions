@@ -55,26 +55,33 @@
           <img class="img-fluid" src='assets/slideshow/PST.jpg' alt="">
 		  <br>
 		  <br>
-		  <p>Youthful Dimensions recommends several monthly treatments, so the desired result can be achieved, followed by maintenance treatments 3-6 monthly.</p>
-		  <p>Please avoid taking ibuprofen, blood thinners, herbal supplements, vitamin E and fish oil for at least one week prior to the PRP facial to minimise bruising.</p>
-		  <p>Immediately following the procedure, the most commonly reported side effects are redness, swelling, bruising, lumpiness and feeling the pressure of fullness at the injection sites or treated areas. Cold gel packs/ice may be applied immediately after treatment to reduce swelling.</p>
-		  <p>Avoid scrubbing or exfoliation over the injection sites for at least 4 hours. For the next 7 days after treatment wash you face gently with a mild cleanser once to twice daily. Then you may return to your regular skincare routine. Avoid make up for at least 24 hours and until healed.</p>
-          <h3 class="my-3">PRP symptoms</h3>
-          <ul>
-            <li>Injections needle marks</li>
-            <li>Swelling (apply ice)</li>
-            <li>Bruising (7-10 days)</li>
-            <li>Itching (antihistamines)</li>
-			<li>Tenderness (paracetamol)</li>
-			<li>Infection (extremly rare)</li>
-          </ul>
+			<button class="collapsible">General Information:</button>
+			<div class="content">
+			  	<p>Youthful Dimensions recommends several monthly treatments, so the desired result can be achieved, followed by maintenance treatments 3-6 monthly.</p>
+				<p>Please avoid taking ibuprofen, blood thinners, herbal supplements, vitamin E and fish oil for at least one week prior to the PRP facial to minimise bruising.</p>
+				<p>Immediately following the procedure, the most commonly reported side effects are redness, swelling, bruising, lumpiness and feeling the pressure of fullness at the injection sites or treated areas. Cold gel packs/ice may be applied immediately after treatment to reduce swelling.</p>
+				<p>Avoid scrubbing or exfoliation over the injection sites for at least 4 hours. For the next 7 days after treatment wash you face gently with a mild cleanser once to twice daily. Then you may return to your regular skincare routine. Avoid make up for at least 24 hours and until healed.</p>
+			</div>
+			<button class="collapsible">PRP Symptoms:</button>
+			<div class="content">
+				  <ul>
+					<li>Injections needle marks</li>
+					<li>Swelling (apply ice)</li>
+					<li>Bruising (7-10 days)</li>
+					<li>Itching (antihistamines)</li>
+					<li>Tenderness (paracetamol)</li>
+					<li>Infection (extremly rare)</li>
+				  </ul>
+			</div>
         </div>
 
         <div class="col-md-4">
-          <h3 class="my-3">PRP Information</h3>
-          <p>PRP facials can be a safe way to reduce the signs of ageing and enhance your natural beauty.</p>
-		  <p>PRP involves your own blood plasma, platelets and growth protein. This self-derived product develops vast capabilities related to tissue regeneration. PRP works by promoting skin repair this in turn stimulates collagen, elastin and cellular growth as well as improving your blood supply and hydration. You skin texture and tone will steadily improve leading to a more youthful appearance.</p>
-		  <p>PRP can be used topically after micro needling and it can also be injected under the skin. PRP is usually treats the face, neck, chest, scalp and hands. PRP facial can also improve the skin texture and tone, refine wrinkles and reduce scars such as acne or stretch marks. Visible results may take up to 12 weeks and will vary depending on different factors such as health, age, diet, smoking and skin type.</p>
+			<button class="collapsible">PRP Summary:</button>
+			<div class="content">
+			<p>PRP facials can be a safe way to reduce the signs of ageing and enhance your natural beauty.</p>
+			<p>PRP involves your own blood plasma, platelets and growth protein. This self-derived product develops vast capabilities related to tissue regeneration. PRP works by promoting skin repair this in turn stimulates collagen, elastin and cellular growth as well as improving your blood supply and hydration. You skin texture and tone will steadily improve leading to a more youthful appearance.</p>
+			<p>PRP can be used topically after micro needling and it can also be injected under the skin. PRP is usually treats the face, neck, chest, scalp and hands. PRP facial can also improve the skin texture and tone, refine wrinkles and reduce scars such as acne or stretch marks. Visible results may take up to 12 weeks and will vary depending on different factors such as health, age, diet, smoking and skin type.</p>
+			</div>
         </div>
 
       </div>
@@ -96,5 +103,21 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
+  <script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.display === "block") {
+		  content.style.display = "none";
+		} else {
+		  content.style.display = "block";
+		}
+	  });
+	}
+</script>
 
 </html>
